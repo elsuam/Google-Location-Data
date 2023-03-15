@@ -3,4 +3,5 @@ This is a Shiny app that uses location data from Google Takeout along with self-
 
 Google's location system calculates distance measurments based on linear Euclidean distances between any two points.  While this is a very accurate measure (for most points are tallied just minutes from one another), I increased the accuracy by proportionalizing the linear distances and multoplying by my self-reported mileage to make for the best possible measurment of mileage between any two given points.
 
+To reduce rendering issues, point data was reduced to an average of one per hour.
 Further measurements will be incorporated and updates rolled out over time to perfect the aestehtics and usability of this app.
