@@ -22,16 +22,16 @@ shinyUI(fluidPage(
                                 plotlyOutput("overalls")
                                 )
                ,
-               conditionalPanel(condition = "input.select == 2",  #opens up a pie chart
-                                
-                                plotOutput("animals"),
-                                
-                                selectInput(inputId = "state",
-                                            label = "Select State/Province",
-                                            choices = anm$State,
-                                            selected = "Virginia")
-                                
-                                ),
+               # conditionalPanel(condition = "input.select == 2",  #opens up a pie chart
+               #                  
+               #                  plotOutput("animals"),
+               #                  
+               #                  selectInput(inputId = "state",
+               #                              label = "Select State/Province",
+               #                              choices = anm$State,
+               #                              selected = "Virginia")
+               #                  
+               #                  ),
 
                # conditionalPanel(condition = "input.select == 3",  #opens up a something
                #                  otherOutput("NULLA")
@@ -48,7 +48,7 @@ shinyUI(fluidPage(
                       label = h3("Date/Time Range"),
                       min = date_start, 
                       max = date_end,
-                      value = c(date_start,df$timestamp[765]),
+                      value = c(date_start,tripdata$timestamp2[765]),
                       width = '100%',
                       timezone = "GMT",
                       step = 1,
@@ -58,7 +58,7 @@ shinyUI(fluidPage(
         ),
         
         column(2,
-            checkboxInput("newpts", label = "Notable Points", value = F),
+            checkboxInput("linestring", label = "Route Line", value = F),
         )
               
     )
